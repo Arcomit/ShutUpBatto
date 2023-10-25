@@ -65,7 +65,7 @@ public class GsonManage {
                 if (Modifier.isInterface(field.getModifiers())) {
                     continue;
                 }
-                if (Modifier.isFinal(field.getModifiers())) {
+                if (!Modifier.isFinal(field.getModifiers())) {
                     continue;
                 }
                 if (IForgeRegistry.class.isAssignableFrom(field.getType())) {
